@@ -1,25 +1,25 @@
-import {AppBar, Container, Toolbar,Typography,Select,MenuItem,makeStyles} from "@mui/material";
-import React from 'react'
-
-const useStyle = makeStyles(() => ({
-  title: {
-    flex:1,
-    color:"gold",
-    fontFamily: "Montserrat",
-    fontWeight:"bold",
-    cursor: "pointer",
-  }
-}))
+import {AppBar,ThemeProvider, Container,createTheme, Toolbar,Typography,Select,MenuItem} from "@mui/material";
+import React from 'react';
+import '../css/header.css';
 
 const Header = () => {
 
+  const darkTheme = createTheme({
+    palette: {
+      primary:{
+        main: "#fff",
+      },
+      type:"dark",
+    },
+  });
 
   return (
+    <ThemeProvider theme={darkTheme}>
     <div>
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <Typography>CRYPTO-X</Typography>
+            <Typography className="title">CRYPTO-X</Typography>
             <Select variant="outlined"  
             style={{
               width:100,
@@ -34,6 +34,7 @@ const Header = () => {
       </AppBar>
       
     </div>
+    </ThemeProvider>
   )
 }
 
