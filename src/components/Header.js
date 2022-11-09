@@ -19,12 +19,12 @@ const Header = () => {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <Typography className="title">CRYPTO-X</Typography>
+            <Typography className="title" varient='h6'>CRYPTO-X</Typography>
             <Select variant="outlined"  
             style={{
               width:100,
               height:40,
-              marginLeft:15,
+              marginRight:15,
             }}>
               <MenuItem value={'USD'}>USD</MenuItem>
               <MenuItem value={'INR'}>INR</MenuItem>
